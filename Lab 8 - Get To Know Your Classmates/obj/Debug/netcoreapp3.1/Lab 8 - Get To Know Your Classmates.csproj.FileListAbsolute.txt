@@ -1,0 +1,11 @@
+C:\Users\shami\source\repos\Lab 8 - Get To Know Your Classmates\Lab 8 - Get To Know Your Classmates\obj\Debug\netcoreapp3.1\Lab 8 - Get To Know Your Classmates.csprojAssemblyReference.cache
+C:\Users\shami\source\repos\Lab 8 - Get To Know Your Classmates\Lab 8 - Get To Know Your Classmates\obj\Debug\netcoreapp3.1\Lab 8 - Get To Know Your Classmates.AssemblyInfoInputs.cache
+C:\Users\shami\source\repos\Lab 8 - Get To Know Your Classmates\Lab 8 - Get To Know Your Classmates\obj\Debug\netcoreapp3.1\Lab 8 - Get To Know Your Classmates.AssemblyInfo.cs
+C:\Users\shami\source\repos\Lab 8 - Get To Know Your Classmates\Lab 8 - Get To Know Your Classmates\bin\Debug\netcoreapp3.1\Lab 8 - Get To Know Your Classmates.exe
+C:\Users\shami\source\repos\Lab 8 - Get To Know Your Classmates\Lab 8 - Get To Know Your Classmates\bin\Debug\netcoreapp3.1\Lab 8 - Get To Know Your Classmates.deps.json
+C:\Users\shami\source\repos\Lab 8 - Get To Know Your Classmates\Lab 8 - Get To Know Your Classmates\bin\Debug\netcoreapp3.1\Lab 8 - Get To Know Your Classmates.runtimeconfig.json
+C:\Users\shami\source\repos\Lab 8 - Get To Know Your Classmates\Lab 8 - Get To Know Your Classmates\bin\Debug\netcoreapp3.1\Lab 8 - Get To Know Your Classmates.runtimeconfig.dev.json
+C:\Users\shami\source\repos\Lab 8 - Get To Know Your Classmates\Lab 8 - Get To Know Your Classmates\bin\Debug\netcoreapp3.1\Lab 8 - Get To Know Your Classmates.dll
+C:\Users\shami\source\repos\Lab 8 - Get To Know Your Classmates\Lab 8 - Get To Know Your Classmates\bin\Debug\netcoreapp3.1\Lab 8 - Get To Know Your Classmates.pdb
+C:\Users\shami\source\repos\Lab 8 - Get To Know Your Classmates\Lab 8 - Get To Know Your Classmates\obj\Debug\netcoreapp3.1\Lab 8 - Get To Know Your Classmates.dll
+C:\Users\shami\source\repos\Lab 8 - Get To Know Your Classmates\Lab 8 - Get To Know Your Classmates\obj\Debug\netcoreapp3.1\Lab 8 - Get To Know Your Classmates.pdb

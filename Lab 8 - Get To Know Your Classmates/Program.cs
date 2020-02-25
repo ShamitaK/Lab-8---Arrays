@@ -6,121 +6,100 @@ namespace Lab_8___Get_To_Know_Your_Classmates
     {
         static void Main(string[] args)
         {
-            do
-            {
-                Console.WriteLine("Let's Get to Know Your Classmates!");
-                string userChoice = GetUserInput("Which student would you like to learn about? Please enter 1-3: ");
+            Console.ForegroundColor = ConsoleColor.DarkMagenta;
+            Console.WriteLine("\t\tLet's Get to Know Some Cartoon Characters!\t\n");
 
-                string[] students = { "Jimmy", "Kim", "Kobe Bryant" };
-                string[] food = { "Pizza", "Ramen", "Hamburger" };
-                string[] hometown = { "Novi", "Phoenix", "Los Angeles", };
-                string[] sports = { "Hockey", "Football", "Basketball" };
+            string[] cartoons = { "Timmy Turner", "Danny Phantom", "Kim Possible", "Katsumi Jun", "Buttercup" };
+            string[] food = { "pizza", "spaghetti", "nachos from Buenos Nachos", "black bean noodles", "steak" };
+            string[] hometown = { "Dimmsdale", "Amity Park", "Middleton", "Japan", "Townsville" };
+            string[] color = { "purple", "white", "red", "blue", "green" };
+            string[] activity = { "hanging out with his fairy odd parents", "beating the evil ghosts", "fighting the bad guys with her best friend Ron",
+                    "fencing", "boxing, so she could fight the bad guys" };
 
-                DisplayNames(students);
-
-                //enter try/catch to make sure there are no exception errors. Must tie in your methods together here.
-                {
-                    try
-                    {
-                        int input = GetInput();
-                        GetStudentInfo(input - 1, students, hometown, food, sports);
-
-                        Console.WriteLine($"Nice selection, what will you like to learn about {students[1]}");
-                    }
-                    catch
-                    {
-                        Console.WriteLine("Looks like there is something went wrong. ");
-                    }
-                }
-                
-                // Console.WriteLine($"Nice selection, what will you like to learn about {students[1]}");
-
-                    userChoice = GetUserInput("Would you like to learn about their hometown or favorite food or their favorite sport? Enter food/ hometown/ sports:").ToLower();
-                    // GetStudentInfo(students, food, hometown, sports
-                catch(IndexOutOfRangeException)
-                {
-                    Console.WriteLine("Please enter a number 1 - 3 to indicate which student you would like to learn about");
-                }
-            }
-            while (GetAnotherStudentInfo());
-
-        }
-        public static void DisplayNames(string[] students)
-        {
-            for (int i = 0; i < students.Length; i++)
-            {
-                Console.WriteLine($"{students[1]}");
-            }
-        }
-        public static void DisplayStudentFood(int input, string[] food)
-        {
-            Console.WriteLine($"Looks like you picked {food[input]}: ");
-        }
-
-        public static void DisplayStudentSport(int input, string sports)
-        {
-            Console.WriteLine($"Looks like you picked {sports[input]}: ");
-        }
-        //create a method where you convert a string to an int and connect it to the userchoices.
-        public static int GetInput()
-        {
-            return int.Parse(Console.ReadLine());
-        }
-        public static int GetSecondInput() //use this to ask the user for hometown or food or sports.
-        {
-            return int.Parse(Console.ReadLine());
-        }
-
-        public static string GetStudentInfo(int input, string[] students, string[] hometown, string[] food, string[] sports) //Maybe break this method down?
-        {
             try
             {
-                if (userChoice == food)
+                do
                 {
-                    Console.WriteLine($"{students[input - 1]} likes {food[input - 1]}");
+                    Console.ForegroundColor = ConsoleColor.DarkGreen;
+                    Console.WriteLine("Here are the Cartoon Characters: ");
+                    DisplayCharacters(cartoons);
+                    int input = GetInput("\nWhich cartoon character would you like to learn about? \nPlease enter a number from 1-5: ");
+
+                    Console.ForegroundColor = ConsoleColor.DarkMagenta;
+                    int input2 = GetInput($"\nNice Choice! What did you want to learn about {cartoons[input - 1]}?\n1. Favorite Food \n2. Hometown \n3. Favorite Color " +
+                        $"\n4. Favorite Activity  \nPlease Enter a number from 1-4: ");
+
+                    Console.ForegroundColor = ConsoleColor.DarkGreen;
+                    if (input2 == 1)
+                    {
+                      
+                       Console.WriteLine($"\n{cartoons[input - 1]}'s favorite food is {food[input - 1]}.\n");
+                    }
+                    else if (input2 == 2)
+                    {
+                        Console.WriteLine($"\n{cartoons[input - 1]}'s hometown is in {hometown[input - 1]}.\n");
+                    }
+                    else if (input2 == 3)
+                    {
+                        Console.WriteLine($"\n{cartoons[input - 1]}'s favorite color is {color[input - 1]}.\n");
+                    }
+                    else if (input2 == 4)
+                    {
+                        Console.WriteLine($"\n{cartoons[input - 1]}'s favorite activity is {activity[input - 1]}.\n");
+                    }
+                    else
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine($"Invalid Entry. Please try again, what did you want to learn from the {cartoons[input - 1]}? \n");
+                    }
                 }
-                else if (userChoice == hometown)
-                {
-                    Console.WriteLine($"{ students}[index - 1] likes {hometown[input - 1] }");
-                }
-                else if (userChoice == sports)
-                {
-                    Console.WriteLine($"{students[input - 1]} likes {sports[input - 1]}");
-                }
+                while (GetAnotherCartoonInfo());
+            }
+            catch(IndexOutOfRangeException)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Error! Please Try Again!");
             }
             catch
             {
-                Console.WriteLine("Invalid Entry. Please try again, what did you want to learn from the student? ");
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine($"Invalid Entry. Please Try Again! \n");
             }
 
-            return GetStudentInfo(input, students, hometown, food, sports);
+        }
+        public static void DisplayCharacters(string[] character)
+        {
+            for (int i = 0; i < character.Length; i++)
+            {
+                Console.WriteLine($"{i + 1}. {character[i]}");
+            }
         }
 
-
-        public static string GetUserInput(string message)
+        public static int GetInput(string input)
         {
-            Console.Write(message);
-            return Console.ReadLine();
+            Console.Write(input);
+            return int.Parse(Console.ReadLine());
         }
-        public static bool GetAnotherStudentInfo()
-        {
-            Console.WriteLine("Would you like to learn about another student? Please enter y/n");
-            string anotherStudent = Console.ReadLine().ToLower();
 
-            if (anotherStudent == "y" || anotherStudent == "yes")
+        public static bool GetAnotherCartoonInfo()
+        {
+            Console.ForegroundColor = ConsoleColor.DarkMagenta;
+            Console.Write("Would you like to learn about another cartoon character? Please enter y/n: \n");
+            string anotherCharacter = Console.ReadLine().ToLower();
+
+            if (anotherCharacter == "y" || anotherCharacter == "yes")
             {
                 return true;
             }
-            else if (anotherStudent == "n" || anotherStudent == "no")
+            else if (anotherCharacter == "n" || anotherCharacter == "no")
             {
                 return false;
             }
             else
             {
-                Console.WriteLine("Invalid Entry, please enter either y or n");
-                return GetAnotherStudentInfo();
+                Console.Write("Invalid Entry, please enter either 'y' or 'n': ");
+                return GetAnotherCartoonInfo();
             }
-
         }
     }
 }
